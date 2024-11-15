@@ -35,10 +35,6 @@ logging.basicConfig(filename='info.log', level=logging.INFO, format='%(asctime)s
 # temperature는 0에 가까워질수록 전달해준 설명 및 질문 내에서만 답변을 내뱉고, 1에 가까워질수록 창의적인 답변을 내뱉음
 chat = ChatOpenAI(model="gpt-4o-mini-2024-07-18", temperature=0.1)
 
-# # 챗봇에게 질문하고 답변 출력
-response = chat.invoke("오늘 날짜가 뭐야? ")
-print(response.content)
-
 # 1) WEB 데이터 로드하기
 loader = WebBaseLoader("https://en.wikipedia.org/wiki/Elon_Musk")
 data = loader.load()
