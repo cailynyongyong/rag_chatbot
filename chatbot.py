@@ -6,6 +6,8 @@ import streamlit as st
 import openai
 # import os
 # os.environ["OPENAI_API_KEY"] = "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"
+import os
+openai.api_key= os.environ.get("OPENAI_API_KEY")
 from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
